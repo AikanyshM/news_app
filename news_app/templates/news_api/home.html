@@ -9,7 +9,24 @@
 </head
 <body>
 
-    <h1>News portal</h1>
+    <h1 class="text-center">News portal</h1>
+
+    <h2>Search Country</h2>
+    <form action="" method="get">
+        <input type="text" name="country">
+        <button type="submit" value="Search">Search</button>
+    
+    </form>
+    <br>
+    <br>
+
+    <h2>Search Category</h2>
+    <form action="" method="get">
+        <input type="text" name="category">
+        <button type="submit" value="Search">Search</button>
+    
+    </form> 
+
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -34,7 +51,19 @@
 
             </div>
             <div class="col-md-6">
-                Category
+                <h3><b>Category</b></h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a class="btn btn-success" href="{% url 'home' %}?category=Health">Health</a></li>
+                    <li class="list-group-item"><a class="btn btn-primary" href="{% url 'home' %}?category=Science">Science</a></li>
+                    <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?category=Technology">Technology</a></li>
+                    <li class="list-group-item"><a class="btn btn-danger" href="{% url 'home' %}?category=Entertainment">Entertainment</a></li>
+                    <li class="list-group-item"><a class="btn btn-secondary" href="{% url 'home' %}?category=Sports">Sports</a></li>
+                    <li class="list-group-item"><a class="btn btn-info" href="{% url 'home' %}?category=Business">Business</a></li>
+
+
+
+
+
             </div>
         
         </div>
