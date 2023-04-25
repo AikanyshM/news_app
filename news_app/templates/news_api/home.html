@@ -9,7 +9,17 @@
 <body>
 
     <h1>News portal</h1>
-    <p> {{ data }} </p>
+    {% for i in articles %}
+
+        <img src="{{ i.urlToImage}}" alt="" height="200px" width="200px">
+            <p> Author: {{ i.author }} </p>
+            <p> {{ i.title }} </p>
+            <p> {{ i.description }} </p>
+
+            <a href="{{ i.url }}" target="_blank">Read full news</a>
+            <p> published at: {{ i.publishedAt }}</p>
+
+    {% endfor %}
 
 </body>
 </html>

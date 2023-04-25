@@ -9,7 +9,9 @@ def home(request):
     data = response.json()
     print(data)
 
+    articles = data['articles']
+
     context = {
-        'data': data
+        'articles': articles
     }
     return render(request, 'news_api/home.html', context)
